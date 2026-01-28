@@ -1,0 +1,37 @@
+{
+  "mcpServers": {
+    "browser-mcp": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "http://127.0.0.1:9106/mcp"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@iflow-mcp/context7-mcp@1.0.0"
+      ]
+    },
+    "surfpool": {
+      "command": "surfpool",
+      "args": [
+        "mcp"
+      ]
+    },
+    "solana-mcp-server": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://mcp.solana.com/mcp",
+        "--enable-proxy"
+      ],
+      "env": {
+        "HTTP_PROXY": "http://127.0.0.1:7891",
+        "HTTPS_PROXY": "http://127.0.0.1:7891",
+        "NO_PROXY": "localhost,127.0.0.1"
+      }
+    }
+  }
+}
